@@ -52,6 +52,14 @@
     &__items {
       grid-template-columns: repeat(3, 1fr);
     }
+    &__bio-image {
+      height: 80vh;
+    }
+  }
+  .about {
+    &__bio-image {
+      height: 80vh;
+    }
   }
   .contact {
     padding-top: 40vh;
@@ -61,9 +69,8 @@
   }
 }
 
-
-@include media-xl{
-    .projects__bio-mage {
-        height: 80vh;
-    }
+@include media-xl {
+  .projects__bio-mage {
+    height: 80vh;
+  }
 }

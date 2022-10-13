@@ -9,8 +9,9 @@
       rgba($primary, 0.2),
       rgba($primary, 0.1)
     ),
-    url("../image/profile.jpg") center top;
+    url("../image/profile.jpg");
   background-size: cover;
+  background-origin: border-box;
   background-repeat: no-repeat;
 
   &-name {

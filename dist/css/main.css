@@ -13,9 +13,10 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(55, 79, 219, 0.2)), to(rgba(55, 79, 219, 0.1))), url("../image/profile.jpg") center top;
-  background: linear-gradient(to right, rgba(55, 79, 219, 0.2), rgba(55, 79, 219, 0.1)), url("../image/profile.jpg") center top;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(55, 79, 219, 0.2)), to(rgba(55, 79, 219, 0.1))), url("../image/profile.jpg");
+  background: linear-gradient(to right, rgba(55, 79, 219, 0.2), rgba(55, 79, 219, 0.1)), url("../image/profile.jpg");
   background-size: cover;
+  background-origin: border-box;
   background-repeat: no-repeat;
 }
 .home-name {
@@ -409,6 +410,12 @@ footer {
 @media screen and (min-width: 1024px) {
   .projects__items {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .projects__bio-image {
+    height: 80vh;
+  }
+  .about__bio-image {
+    height: 80vh;
   }
   .contact {
     padding-top: 40vh;
