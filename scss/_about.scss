@@ -1,0 +1,62 @@
+.about {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        rgba($primary, 0.2),
+        rgba($primary, 0.1)
+      ),
+      url("../image/profile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    p {
+      margin-bottom: 1rem;
+    }
+  }
+  &__bio {
+    width: 80%;
+    text-align: center;
+
+    .text-secondary {
+      padding-bottom: 1rem;
+    }
+  }
+
+  .jobs {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    &__job {
+      background: lighten($dark, 20%);
+      padding: 0.5rem;
+      border-bottom: 5px solid darken($dark, 80%);
+
+      h2,
+      h3 {
+        margin: 0.5rem 0rem;
+      }
+
+      h6 {
+        margin: 0.3rem 0;
+      }
+    }
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+footer {
+  transform: rotate(90deg) translate(-3rem, -5rem);
+}

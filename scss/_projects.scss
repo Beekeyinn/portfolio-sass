@@ -1,0 +1,100 @@
+.projects {
+  padding-bottom: 2rem;
+
+  &__bio-image {
+    background: linear-gradient(
+        to right,
+        rgba($primary, 0.2),
+        rgba($primary, 0.1)
+      ),
+      url("../image/profile.jpg") top center no-repeat;
+    background-size: cover;
+    background-position: top;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    .text-secondary {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: lighten($secondary, 50);
+    }
+  }
+
+  &__items {
+    width: 60vw;
+    margin: 2rem auto 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  &__item {
+    position: relative;
+    border-bottom: 5px solid darken($dark, 80%);
+    overflow: hidden;
+    cursor: pointer;
+
+    &-img-wrapper {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: $dark;
+      opacity: 0;
+      @include transition-ease;
+    }
+    &:hover {
+      &::after {
+        top: 0;
+        opacity: 0.9;
+      }
+
+      .projects__btn {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+  }
+
+  &__btn {
+    opacity: 0;
+    color: lighten($dark, 100);
+    @include transition-ease;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+// @for $i from 1 through 2 {
+//   .projects__item:nth-child(#{$i}) {
+//     grid-template-areas: "item#{$i}";
+//     border-top: 2px solid red;
+//   }
+// }

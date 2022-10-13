@@ -1,0 +1,35 @@
+$primary: #374fdbea;
+$secondary: #5c5c5cbb;
+$success: #36df44e1;
+$danger: #f14e4ed8;
+$warning: #fffb2aee;
+$info: #31c2dcf5;
+$dark: #181818e1;
+$white: #e9e9e9f1;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin media-md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin media-xl {
+  @media screen and (min-width: 1600px) {
+    @content;
+  }
+}
